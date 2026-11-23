@@ -34,13 +34,12 @@ public class Caminhao extends Veiculo{
     public double calcularPrecoVenda(){
         double valor = super.getValorBase() - calcularDepreciacao();
         
-        if (numeroEixos > 2){
-            double eixos = numeroEixos * 8000;
-            valor = valor + eixos;
+        if (numeroEixos > 2) {
+            valor += (numeroEixos - 2) * 8000;
         }
         
         if (super.getQuilometragem() > 500000){
-            valor = valor * 0.10;
+            valor = valor * 0.90;
         }
         
         return valor;

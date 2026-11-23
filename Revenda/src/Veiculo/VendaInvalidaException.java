@@ -1,10 +1,12 @@
 package Veiculo;
-public class VendaInvalidaException extends RuntimeException{    
-    public VendaInvalidaException(){
-        super("ouve um erro chefe");
+
+public class VendaInvalidaException extends Exception {
+
+    public VendaInvalidaException() {
+        super("Venda inválida");
     }
-    
-    public VendaInvalidaException(String mensagem){
+
+    public VendaInvalidaException(String mensagem) {
         super(mensagem);
     }
 }

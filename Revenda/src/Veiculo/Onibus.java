@@ -7,8 +7,8 @@ public class Onibus extends Veiculo{
         if (placa == "" || marca == "" || modelo == ""){
             throw new DadosInvalidosException();
         }
-        if (numeroAssentos < 10 && numeroAssentos > 60){
-            throw new DadosInvalidosException();
+        if (numeroAssentos < 10 || numeroAssentos > 60) {
+            throw new DadosInvalidosException("Número de assentos inválido: " + numeroAssentos);
         }
         super(placa, marca, modelo, anoFabricacao, quilometragem, valorBase);
         this.numeroAssentos = numeroAssentos;
